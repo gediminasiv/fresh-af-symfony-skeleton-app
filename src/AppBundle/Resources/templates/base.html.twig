@@ -1,4 +1,118 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="{{ asset('components/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('components/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('components/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  </head>
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Users</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item d-md-down-none">
+          <a class="nav-link bold" href="#">
+            <img src="{{ asset('img/favicon.png') }}" alt="." /> 137 000
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header text-center">
+              <strong>Settings</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-comments"></i> Mail
+              <span class="badge badge-warning">42</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-lock"></i> Logout
+            </a>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <div class="app-body">
+      <div class="sidebar orca-sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item py-4 ico-button-wrapper">
+              <button type="button" class="btn btn-primary py-2 px-5">ICO</button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="colors.html">
+                <i class="nav-icon fas fa-lock-open"></i> Cabinet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="typography.html">
+                <i class="nav-icon fas fa-history"></i> History</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="typography.html">
+                <i class="nav-icon fas fa-users"></i> Referral</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="notifications-alerts.html">
+                <i class="nav-icon fas fa-newspaper"></i> Docs & News <span class="badge badge-primary">3</span></a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="notifications-alerts.html">
+                <i class="nav-icon far fa-file-alt"></i> Terms & Conditions</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="notifications-alerts.html">
+                <i class="nav-icon fas fa-wrench"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="main">
+
+        <div class="container-fluid dashboard-main">
+          {% block body %}{% endblock %}
+        </div>
+
+      </main>
+
+    </div>
+
+    <script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('components/popper.js/dist/umd/popper.min.js') }}"></script>
+    <script src="{{ asset('components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/pace.min.js') }}"></script>
+    <script src="{{ asset('components/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('js/core.min.js') }}"></script>
+  </body>
+</html>
+{#<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -18,3 +132,4 @@
         {% block javascripts %}{% endblock %}
     </body>
 </html>
+#}
